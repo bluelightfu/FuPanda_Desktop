@@ -1,0 +1,32 @@
+function displayResult() {
+    var x = document.getElementById("ord_date");
+    var dateMsg = "目前可選日期: ";
+    var i;
+    for (i = 1; i < x.length; i++) {
+        dateMsg = dateMsg + "\n" + x.options[i].text;
+    }
+    console.error(dateMsg)
+    var newDateMsg = "\n"+"目前幫你暫選: " + x.options[1].text
+    console.error(newDateMsg)
+}
+document.getElementById("how2know1").checked = true;
+var jstext = document.getElementById("user_name");
+jstext.value = "肉肉爸比or肉肉媽咪";
+var jstext = document.getElementById("user_phone");
+jstext.value = "0914999999";
+var jstext = document.getElementById("cardno1");
+jstext.value = "1111";
+var jstext = document.getElementById("cardno2");
+jstext.value = "2222";
+var jstext = document.getElementById("cardno4");
+jstext.value = "3333";
+var jstext = document.getElementById("user_email");
+jstext.value = "alice@gmail.com";
+try{
+document.getElementById("ord_date").options[3].selected=true
+}catch(e){
+var error = "選擇日期出現了問題"
+console.error(error)
+displayResult()
+document.getElementById("ord_date").options[1].selected=true
+}
